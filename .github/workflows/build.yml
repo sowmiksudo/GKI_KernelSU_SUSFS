@@ -126,6 +126,7 @@ jobs:
         fi
 
         repo --trace sync -c -j$(nproc --all) --fail-fast --no-tags --force-sync --no-clone-bundle
+        cd common && git checkout 22c360466943 && cd ..
 
     - name: Extract Sublevel and Set File Name
       run: |
